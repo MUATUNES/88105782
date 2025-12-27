@@ -84,7 +84,7 @@ function initializeSocket() {
 
 // Generate random room ID
 function generateRoomId() {
-    return 'room-' + Math.random().toString(36).substr(2, 9);
+    return 'room-' + Math.random().toString(36).substring(2, 11);
 }
 
 // Join a room
@@ -96,7 +96,7 @@ function joinRoom() {
     }
     
     currentRoomId = roomId;
-    currentUserId = 'user-' + Math.random().toString(36).substr(2, 9);
+    currentUserId = 'user-' + Math.random().toString(36).substring(2, 11);
     
     socket.emit('join-room', currentRoomId, currentUserId);
     
