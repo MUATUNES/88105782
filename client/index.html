@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUA!_TUNES - Remote Desktop Sharing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎵 MUA!_TUNES RADIO</h1>
+            <h2>Remote Desktop Sharing</h2>
+        </header>
+        
+        <div class="controls">
+            <div class="room-controls">
+                <input type="text" id="roomId" placeholder="Enter Room ID (e.g., room123)" />
+                <button id="joinBtn">Join Room</button>
+                <button id="createBtn">Create Random Room</button>
+            </div>
+            
+            <div class="sharing-controls" id="sharingControls" style="display: none;">
+                <button id="shareBtn">Share My Screen</button>
+                <button id="stopShareBtn" style="display: none;">Stop Sharing</button>
+                <button id="leaveBtn">Leave Room</button>
+            </div>
+            
+            <div class="status">
+                <p id="status">Not connected</p>
+                <p id="roomInfo"></p>
+            </div>
+        </div>
+        
+        <div class="video-container">
+            <div class="local-screen">
+                <h3>My Screen</h3>
+                <video id="localVideo" autoplay muted playsinline></video>
+                <p class="video-label">Your screen (only visible when sharing)</p>
+            </div>
+            
+            <div class="remote-screens" id="remoteScreens">
+                <h3>Remote Screens</h3>
+                <div id="remoteVideos"></div>
+                <p class="video-label">Screens shared by others in the room</p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>WebRTC-based peer-to-peer screen sharing</p>
+            <p>Share your desktop securely with team members</p>
+        </footer>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>

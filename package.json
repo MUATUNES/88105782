@@ -1,0 +1,22 @@
+{
+  "name": "mua-tunes-remote-desktop",
+  "version": "1.0.0",
+  "description": "Remote Desktop Sharing for MUA!_TUNES RADIO",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node server/server.js"
+  },
+  "keywords": [
+    "remote-desktop",
+    "screen-sharing",
+    "webrtc",
+    "socket.io"
+  ],
+  "author": "MUA!_TUNES",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.6.1"
+  }
+}
